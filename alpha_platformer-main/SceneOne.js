@@ -29,7 +29,7 @@ class SceneOne extends Phaser.Scene{
            }
     create(){
         mountainsBack = this.add.image(640, 360, 'background');
-        texteStatue = this.add.text(600, 200, 'Oinya ascadiquia', { font: '48px Arial', fill:"#009" }).setVisible(false);
+        texteStatue = this.add.text(420, 200, 'Oinya ascadiquia', { font: '48px Arial', fill:"#009" }).setVisible(false);
         //---------SETTIMEOUT-------------//
         // setTimeout(function(){ce qui se passe}, temps);
         //-------------------------------//
@@ -43,7 +43,7 @@ class SceneOne extends Phaser.Scene{
         
         function recupCoffre(player,coffre){
             coffre.destroy();
-            texteApparu = this.add.text(250, 200, 'pocati', { font: '48px Arial', fill:"#009" });
+            texteApparu = this.add.text(10, 200, 'Médusa savait comment transformer un homme en pierre.', { font: '48px Arial', fill:"#009" });
             setTimeout (function(){
                 texteApparu.destroy()
             },1500);
@@ -84,9 +84,7 @@ class SceneOne extends Phaser.Scene{
         else if (keys.right.isUp && keys.left.isUp){
             player.setVelocity(0);
         }
-        if (player.x >= 500 && player.x <=700){
-            texteStatue.setVisible(true);
-            }
+           
         else{
             texteStatue.setVisible(false);
         }
